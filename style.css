@@ -52,7 +52,7 @@
     display: flex;
     justify-content: space-between;
     flex-direction: column; /* estrutura da Caixa de texto */
-
+    border-radius: 20px;
 }
 
 .buttons {

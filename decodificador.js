@@ -8,17 +8,17 @@ const palavras = {
 const alphabet = ['a', 'e', 'i', 'o', 'u'];
 
 function codificar(){
-    let word = document.getElementById("texto__original").value;
-    word = word.toLowerCase();
-    let word2 = "";
+    let word = document.getElementById("texto__original").value; // Pega o texto digitado pelo usuário
+    word = word.toLowerCase(); // Transforma todas as letras em minúsculas
+    let word2 = ""; // Variável que irá armazenar o texto criptografado
     for(let i = 0; i < word.length; i++) {
-        word[i] === alphabet[0] ? word2 += palavras.a : word[i];
+        word[i] === alphabet[0] ? word2 += palavras.a : word[i]; // Se a letra atual for igual a letra a, substitui pela palavra criptografada
         word[i] === alphabet[1] ? word2 += palavras.e : word[i];
         word[i] === alphabet[2] ? word2 += palavras.i : word[i];
         word[i] === alphabet[3] ? word2 += palavras.o : word[i];
         word[i] === alphabet[4] ? word2 += palavras.u : word[i];
     };
-    document.getElementById("texto__criptografado").value = word2;
+    document.getElementById("texto__criptografado").value = word2; // Adiciona o texto criptografado no campo de texto
     console.log(word2);
 }
 
@@ -26,7 +26,6 @@ function decodificar(){
     let word = document.getElementById("texto__criptografado").value;
     word = word.toLowerCase();
     let word2 = "";
-    let tempword = [word];
     for(let i = 0; i < word.length; i++) {
         let letraDecodificada = null;
         // Verifica se a letra atual corresponde a alguma palavra criptografada
@@ -49,5 +48,17 @@ function decodificar(){
 }
 
 function copiar(){
-
+   // Seleciona o elemento de texto criptografado
+   let textoCriptografado = document.getElementById("texto__criptografado").value;
+  
+   // Copia o texto para a área de transferência
+   navigator.clipboard.writeText(textoCriptografado)
+   .then(() => {
+       // Mostra uma mensagem de confirmação para o usuário
+       alert("Texto copiado para a área de transferência!");
+   })
+   .catch(err => {
+       // Em caso de erro, exibe uma mensagem de erro
+       console.error('Falha ao copiar texto: ', err);
+   });
 }
