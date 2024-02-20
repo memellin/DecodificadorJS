@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    border: 0;
+    text-decoration: none;
+    color: #3F979B;
+}
+
+:root {
+    --primary-color: #F9F54B;
+    --secondary-color: #8BF5FA;
+    --tertiary-color: #3F979B;
+    --hover-color: #205E61;
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: var(--primary-color);
+    color: var(--tertiary-color);
+
+}
+.logo {
+    display: flex;
+    justify-content: left;   
+    
+}
+
+.body {
+    width: 1440px;
+    height: 1024px;
+    color: var(--tertiary-color);
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    background-color: var(--primary-color);    
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    gap: 40px;
+    margin-top: 160px;
+    margin-left: 400px;
+}
+
+.container__caixa {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column; /* estrutura da Caixa de texto */
+
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row; /* alinha os botoes lado a lado*/
+    gap: 10px;
+}
+
+.texto__original {
+    border: 2px solid var(--tertiary-color);
+    width: 280px;
+    height: 400px;
+    line-height: 150%;
+    text-align: left;
+    outline: none; /* * Permanece a cor da borda que eu coloquei ao ser clickado */
+}
+.button__criptografar {
+    background-color: var(--secondary-color);
+    color: var(--tertiary-color);
+    border: none;
+    width: 130px;
+    height: 50px;
+    font-size: 17px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.texto__criptografado {
+    border: 2px solid var(--tertiary-color);
+    width: 280px;
+    height: 400px;
+    line-height: 150%;
+    text-align: left;
+    outline: none;
+}
+ .button__descriptografar {
+    background-color: var(--secondary-color);
+    color: var(--tertiary-color);
+    border: none;
+    width: 130px;
+    height: 50px;
+    font-size: 17px;
+    margin-top: 20px;
+    cursor: pointer;
+    
+}
+
+.button__copiar {
+    background-color: var(--secondary-color);
+    color: var(--tertiary-color);
+    border: none;
+    width: 130px;
+    height: 50px;
+    font-size: 17px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.rodape {
+    padding: 200px 440px;
+    border: 2px solid var(--tertiary-color);
+}

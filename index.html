@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decodificador</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<header class="head">
+    <img class="logo" src="img/logo/alura-logo.1686744881.svg" alt="alura"></img>
+</header>
+<body class="body">
+    <main class="container">
+        <div class="container__caixa">
+            <textarea class="texto__original" name="texto__original" id="texto__original" cols="30" rows="10" placeholder="Escreva aqui"></textarea>
+                <div class="buttons">
+                    <button class="button__criptografar" onclick="codificar()">
+                        Criptografar
+                    </button>
+                    <button class="button__descriptografar">
+                        Descriptografar
+                    </button>
+                </div>
+        </div>
+       
+        <div class="container__caixa">
+            <textarea class="texto__criptografado" name="texto__criptografado" id="texto__criptografado" cols="30" rows="10" placeholder="Resultado" readonly></textarea>
+                <div class="buttons">
+                    <button class="button__copiar">
+                        Copiar
+                    </button>
+                </div>
+        </div>
+    </main>
+    <footer class="rodape">
+		Desenvolvido por Enock
+	</footer>
+    <script src = "decodificador.js" defer></script>
+</body>
+</html>
