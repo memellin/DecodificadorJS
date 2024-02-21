@@ -28,37 +28,39 @@
 }
 
 .body {
-    width: 1440px;
-    height: 1024px;
+    width: 1000px;
+    height: 724px;
+    box-sizing: border-box;
     color: var(--tertiary-color);
     font-family: Inter;
     font-size: 32px;
     font-style: normal;
     font-weight: 400;
     background-color: var(--primary-color);    
+    color: var(--secondary-color);
 }
 
 .container{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: baseline;
-    gap: 40px;
-    margin-top: 160px;
-    margin-left: 530px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh;
 }
 
 .container__caixa {
     display: flex;
-    justify-content: space-between;
     flex-direction: column; /* estrutura da Caixa de texto */
     border-radius: 20px;
+    margin: 0 auto;
 }
 
 .buttons {
     display: flex;
-    flex-direction: row; /* alinha os botoes lado a lado*/
-    gap: 28px;
+  flex-direction: row;
+  justify-content: center; /* Center buttons horizontally */
+  gap: 28px;
+  align-items: flex-end;
 }
 
 .texto__original {
@@ -115,7 +117,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px 40px;
+    padding: 20px 5px;
     background-color: var(--primary-color);
     color: var(--tertiary-color);
     position: absolute;
@@ -123,8 +125,51 @@
     width: 100%;
     height: 100px;
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 700;
     font-style: normal;
     font-family: Inter;
     text-align: center;
+}
+
+@media (max-width: 1000px) {
+
+    .body {
+        width: 100%;
+        height: 100%;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .container__caixa {
+        margin: 0px 0;
+    }
+    .texto__original {
+        width: 100%;
+        height: 250px;
+    }
+    .texto__criptografado {
+        width: 100%;
+        height: 250px;
+    }
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .button__criptografar {
+        width: 100%;
+    }
+    .button__descriptografar {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    .button__copiar {
+        width: 100%;
+    }
+    .rodape {
+        position: relative;
+    }
+
 }
