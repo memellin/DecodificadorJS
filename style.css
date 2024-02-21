@@ -28,8 +28,8 @@
 }
 
 .body {
-    width: 1000px;
-    height: 724px;
+    width: 1424px;
+    height: 924px;
     box-sizing: border-box;
     color: var(--tertiary-color);
     font-family: Inter;
@@ -41,26 +41,30 @@
 }
 
 .container{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    display: flex;
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
     min-height: 100vh;
+    width: 134%;
 }
 
 .container__caixa {
     display: flex;
     flex-direction: column; /* estrutura da Caixa de texto */
-    border-radius: 20px;
-    margin: 0 auto;
+    margin: 0;
+    padding: 30px;
+    justify-self: center;
+    align-self: center;
+    background-color: var(--primary-color);
 }
 
 .buttons {
     display: flex;
-  flex-direction: row;
-  justify-content: center; /* Center buttons horizontally */
-  gap: 28px;
-  align-items: flex-end;
+    flex-direction: row;
+    justify-content: center; /* Center buttons horizontally */
+    gap: 28px;
+    align-items: flex-end;
+    border-radius: 20px;
 }
 
 .texto__original {
@@ -69,6 +73,7 @@
     height: 400px;
     line-height: 150%;
     text-align: left;
+    background-color: inherit;
     outline: none; /* * Permanece a cor da borda que eu coloquei ao ser clickado */
 }
 .button__criptografar {
@@ -89,6 +94,7 @@
     line-height: 150%;
     text-align: left;
     outline: none;
+    background-color: inherit;
 }
  .button__descriptografar {
     background-color: var(--secondary-color);
